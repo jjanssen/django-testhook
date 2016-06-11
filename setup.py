@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from testhook import __version__
 
 # Testing dependencies
-testing_extras = [
+test_extras = [
     'coverage>=4.0.3',
     'flake8>=2.5.2',
     'tox>=2.3.1'
@@ -54,6 +54,6 @@ setup(
     ],
 
     extras_require={
-        'testing': testing_extras
+        'test': test_extras
     },
 )
