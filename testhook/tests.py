@@ -41,3 +41,23 @@ class TesthookTagTests(SimpleTestCase):
         self.assertRaises(
             TemplateSyntaxError, _render, '{% testhook obj %}', context
         )
+
+    def test_testhook_additional_arguments(self):
+        self.assertEqual(
+            _render('{% testhook "prepend" "addon" %}'),
+            'data-testhook-id="prepend-addon"'
+        )
+
+        self.assertEqual(
+            _render('{% testhook "prepend" "Add On" %}'),
+            'data-testhook-id="prepend-add-on"'
+        )
+
+        context = {"product": {"id": 1, "slug": "unique-slug"}}
+        self.assertEqual(
+            _render(
+                '{% testhook "prepend" product.id product.slug %}',
+                context
+            ),
+            'data-testhook-id="prepend-1-unique-slug"'
+        )
