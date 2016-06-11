@@ -4,8 +4,8 @@ from django.conf import settings
 from django.utils.safestring import mark_safe
 from django.utils.text import slugify
 
-if sys.version_info[0] == 2:
-    str = basestring
+if sys.version_info[0] == 3:
+    basestring = str
 
 register = Library()
 
@@ -15,15 +15,18 @@ def testhook(name, *args):
     if not getattr(settings, 'TESTHOOK_ENABLED', True):
         return u''
 
-    if not isinstance(name, str):
+    if not isinstance(name, basestring):
         raise TemplateSyntaxError(
             'Testhook takes at least one argument (string)'
         )
 
-    # slugify the name by default
-    name = slugify(name)
-
     if args:
-        name = '{}-{}'.format(name, '-'.join(filter(None, args)))
+        filtered = filter(None, args)
+        concatted = '-'.join(str(x) for x in filtered)
+        name = '{}-{}'.format(name, concatted)
 
-    return mark_safe(u'data-testhook-id="{0}"'.format(name))
+    return mark_safe(
+        u'data-testhook-id="{0}"'.format(
+            slugify(name)
+        )
+    )
