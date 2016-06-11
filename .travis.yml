@@ -5,9 +5,14 @@ python:
   - "3.4"
   - "3.5"
 
+matrix:
+  allow_failures:
+    - env: DJANGO=https://github.com/django/django/tarball/master
+
 env:
   - DJANGO="django>=1.8.0,<1.9.0"
   - DJANGO="django>=1.9.0,<1.10.0"
+  - DJANGO=https://github.com/django/django/tarball/master
 
 install:
   - travis_retry pip install -q coveralls  # installs coverage
