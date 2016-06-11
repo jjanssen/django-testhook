@@ -1,2 +1,2 @@
 # django-testhook
-Template tag to enable testhook attributes on HTML elements.
+A Django template tag to enable testhook attributes on HTML elements.
