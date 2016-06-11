@@ -1,20 +1,13 @@
 # django-testhook (WIP)
 A Django template tag to enable testhook attributes on HTML elements.
 
-.. image:: https://travis-ci.org/jjanssen/django-testhook.svg?branch=master
-    :target: http://travis-ci.org/jjanssen/django-testhook
-.. image:: https://img.shields.io/pypi/v/django-testhook.svg
-    :target: https://pypi.python.org/pypi/django-testhook/
-.. image:: https://img.shields.io/pypi/dm/django-testhook.svg
-    :target: https://pypi.python.org/pypi/django-testhook/
-.. image:: https://img.shields.io/badge/wheel-yes-green.svg
-    :target: https://pypi.python.org/pypi/django-testhook/
-.. image:: https://img.shields.io/pypi/l/django-testhook.svg
-    :target: https://pypi.python.org/pypi/django-testhook/
-.. image:: https://img.shields.io/pypi/pyversions/Django.svg
-    :target: https://pypi.python.org/pypi/django-testhook/
-.. image:: https://coveralls.io/repos/jjanssen/django-testhook/badge.svg?branch=master
-    :target: https://coveralls.io/github/jjanssen/django-testhook?branch=master
+[![](https://travis-ci.org/jjanssen/django-testhook.svg?branch=master)](http://travis-ci.org/jjanssen/django-testhook)
+[![](https://img.shields.io/pypi/v/django-testhook.svg)](https://pypi.python.org/pypi/django-testhook/)
+[![](https://img.shields.io/pypi/dm/django-testhook.svg)](https://pypi.python.org/pypi/django-testhook/)
+[![](https://img.shields.io/badge/wheel-yes-green.svg)]( https://pypi.python.org/pypi/django-testhook/)
+[![](https://img.shields.io/pypi/l/django-testhook.svg)](https://pypi.python.org/pypi/django-testhook/)
+[![](https://img.shields.io/pypi/pyversions/Django.svg)](https://pypi.python.org/pypi/django-testhook/)
+[![](https://coveralls.io/repos/jjanssen/django-testhook/badge.svg?branch=master)](https://coveralls.io/github/jjanssen/django-testhook?branch=master)
 
 ## About django-testhook
 
