@@ -15,8 +15,7 @@ def testhook(name, *args):
         raise TemplateSyntaxError(
             'Invalid testhook argument for name, expected non empty string'
         )
-
-    if not isinstance(name, basestring):
+    elif not isinstance(name, basestring):
         raise TemplateSyntaxError(
             'Invalid testhook argument for name, expected string'
         )
