@@ -17,6 +17,12 @@ if not settings.configured:
             'django.contrib.sessions',
             'testhook'
         ),
+        TEMPLATES=[
+            {
+                'BACKEND': 'django.template.backends.django.DjangoTemplates',
+                'APP_DIRS': True,
+            },
+        ],
         # ROOT_URLCONF='p3p.tests.urls',
         TEST_RUNNER='django.test.runner.DiscoverRunner',
     )
