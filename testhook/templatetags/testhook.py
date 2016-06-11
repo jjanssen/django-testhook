@@ -15,7 +15,7 @@ def testhook(name, *args):
     if not getattr(settings, 'TESTHOOK_ENABLED', True):
         return u''
 
-    if not name or not isinstance(name, str):
+    if not isinstance(name, str):
         raise TemplateSyntaxError(
             'Testhook takes at least one argument (string)'
         )
