@@ -1,5 +1,6 @@
 from django.template import Template, Context, TemplateSyntaxError
 from django.test import SimpleTestCase
+from django.test.utils import override_settings
 
 
 def _render(template, context={}):
@@ -9,6 +10,10 @@ def _render(template, context={}):
 
 
 class TesthookTagTests(SimpleTestCase):
+
+    @override_settings(TESTHOOK_ENABLED=False)
+    def test_testhook_disabled(self):
+        self.assertEqual(_render('{% testhook "example" %}'), '')
 
     def test_testhook_name_only(self):
         self.assertEqual(
