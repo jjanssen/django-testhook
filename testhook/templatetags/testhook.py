@@ -15,13 +15,9 @@ def testhook(name, *args):
     if not getattr(settings, 'TESTHOOK_ENABLED', True):
         return u''
 
-    if not name:
+    if not name or not isinstance(name, str):
         raise TemplateSyntaxError(
-            'Invalid testhook argument for name, expected non empty string'
-        )
-    elif not isinstance(name, str):
-        raise TemplateSyntaxError(
-            'Invalid testhook argument for name, expected string'
+            'Testhook takes at least one argument (string)'
         )
 
     # slugify the name by default
