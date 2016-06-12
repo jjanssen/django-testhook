@@ -19,7 +19,7 @@ setup(
 
     description='''A Django template tag to enable testhook
         attributes on HTML elements.''',
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
 
     author='Janneke Janssen',
     author_email='j.janssen@lukkien.com',
