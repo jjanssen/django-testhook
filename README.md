@@ -1,4 +1,4 @@
-# django-testhook (WIP)
+# django-testhook
 A Django template tag to enable testhook attributes on HTML elements.
 
 [![](https://travis-ci.org/jjanssen/django-testhook.svg?branch=master)](http://travis-ci.org/jjanssen/django-testhook)
