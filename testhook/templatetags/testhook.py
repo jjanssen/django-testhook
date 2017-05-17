@@ -26,7 +26,7 @@ def testhook(name, *args):
         name = '{}-{}'.format(name, concatted)
 
     return mark_safe(
-        u'data-testhook-id="{0}"'.format(
+        u' data-testhook-id="{0}"'.format(
             slugify(name)
         )
     )

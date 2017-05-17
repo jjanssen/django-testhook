@@ -17,20 +17,20 @@ class TesthookTagTests(SimpleTestCase):
 
     def test_testhook_name_only(self):
         self.assertEqual(
-            _render('{% testhook "example" %}'), 'data-testhook-id="example"'
+            _render('{% testhook "example" %}'), ' data-testhook-id="example"'
         )
         self.assertEqual(
             _render('{% testhook "example-with-dash" %}'),
-            'data-testhook-id="example-with-dash"'
+            ' data-testhook-id="example-with-dash"'
         )
 
         self.assertEqual(
             _render('{% testhook "Just Do It" %}'),
-            'data-testhook-id="just-do-it"'
+            ' data-testhook-id="just-do-it"'
         )
         self.assertEqual(
             _render('{% testhook "Just_Do_It" %}'),
-            'data-testhook-id="just_do_it"'
+            ' data-testhook-id="just_do_it"'
         )
 
     def test_testhook_no_name(self):
@@ -45,12 +45,12 @@ class TesthookTagTests(SimpleTestCase):
     def test_testhook_additional_arguments(self):
         self.assertEqual(
             _render('{% testhook "prepend" "addon" %}'),
-            'data-testhook-id="prepend-addon"'
+            ' data-testhook-id="prepend-addon"'
         )
 
         self.assertEqual(
             _render('{% testhook "prepend" "Add On" %}'),
-            'data-testhook-id="prepend-add-on"'
+            ' data-testhook-id="prepend-add-on"'
         )
 
         context = {"product": {"id": 1, "slug": "unique-slug"}}
@@ -59,5 +59,5 @@ class TesthookTagTests(SimpleTestCase):
                 '{% testhook "prepend" product.id product.slug %}',
                 context
             ),
-            'data-testhook-id="prepend-1-unique-slug"'
+            ' data-testhook-id="prepend-1-unique-slug"'
         )
