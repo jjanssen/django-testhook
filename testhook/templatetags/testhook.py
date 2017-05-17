@@ -4,7 +4,7 @@ from django.conf import settings
 from django.utils.safestring import mark_safe
 from django.utils.text import slugify
 
-if sys.version_info[0] == 3:
+if sys.version_info[0] > 2:
     basestring = str
 
 register = Library()
@@ -26,7 +26,7 @@ def testhook(name, *args):
         name = '{}-{}'.format(name, concatted)
 
     return mark_safe(
-        u'data-testhook-id="{0}"'.format(
+        u' data-testhook-id="{0}"'.format(
             slugify(name)
         )
     )
